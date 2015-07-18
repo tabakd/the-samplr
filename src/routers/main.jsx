@@ -9,6 +9,9 @@ export default class MainRouter extends React.Component {
     return (
       <div id="container">
         <div id="main">
+              <header>
+        <h1>svmplr</h1>
+    </header>
           <RouteHandler {...this.props} />
         </div>
       </div>

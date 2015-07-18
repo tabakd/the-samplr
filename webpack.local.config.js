@@ -43,6 +43,10 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loaders: ["react-hot", "babel-loader?stage=0"],
+      },
+      {
+        test: /\.less$/,
+        loader: 'style!css?sourceMap!autoprefixer?browsers=last 2 version!less?outputStyle=expanded&sourceMap'
       }
     ]
   },
