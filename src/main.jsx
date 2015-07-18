@@ -9,9 +9,6 @@ import "babel-core/polyfill";
 import React from "react";
 import Router from "react-router";
 
-// Common utilities
-import Session from "./common/session";
-
 // Routers
 import MainRouter from "./routers/main";
 

@@ -7,16 +7,12 @@ export default class HomePage extends React.Component {
   }
 
   render() {
-    let { title } = this.props.data.home;
+    let { title } = "Home";
 
     return (
       <div id="home-page">
         <h1>{title}</h1>
       </div>
     );
-  }
-
-  static fetchData = function(params) {
-    return getData("/home");
   }
 }
