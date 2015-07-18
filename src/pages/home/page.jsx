@@ -1,17 +1,20 @@
 import React from "react";
-import { getData } from "../../common/request";
+import Samples from "../../common/samples";
+import Search from "../../common/search";
 
 export default class HomePage extends React.Component {
-  componentWillMount() {
-    console.log("[HomePage] will mount with server response: ", this.props.data.home);
+  constructor(){
+    super();
+    this.state = {
+      samples: ['sick beat']
+    }
   }
 
   render() {
-    let { title } = "Home";
-
     return (
       <div id="home-page">
-        <h1>{title}</h1>
+        <Samples samples={this.state.samples}/>
+        <Search />
       </div>
     );
   }

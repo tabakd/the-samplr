@@ -8,14 +8,6 @@ export default class MainRouter extends React.Component {
   render() {
     return (
       <div id="container">
-        <div id="navigation">
-          <header>
-            <ul>
-              <li><Link to="home">Home</Link></li>
-            </ul>
-          </header>
-        </div>
-
         <div id="main">
           <RouteHandler {...this.props} />
         </div>

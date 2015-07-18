@@ -20,5 +20,5 @@ var routes = MainRouter.getRoutes()
 
 // Start the router
 Router.run(routes, Router.HistoryLocation, function(Handler, state) {
-  React.render(<Handler data={data} />, document.getElementById(DOM_APP_EL_ID));
+  React.render(<Handler />, document.getElementById(DOM_APP_EL_ID));
 });
