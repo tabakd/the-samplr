@@ -1,10 +1,168 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Essential React Template</title>
+  <title>SVMPLR</title>
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style>
+    #app { display: none; }
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: black;
+    color: white;
+    position: absolute;
+    height: 60px;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+header h1 {
+    margin: 0;
+    font-size: 3.7em;
+}
+
+.left-panel {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: red;
+}
+
+.right-panel {
+    background-color: blue;
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    left: 300px;
+    right: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.search.left-panel {
+    z-index: 1;
+    background-color: #555;
+    padding: 10px;
+}
+.search input {
+    width: 100%;
+    height: 3em;
+    border-radius: 5px;
+    border: 1px solid #111;
+    background-color: #333;
+    color: #DDD;
+}
+.search .search-results {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 300px;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0;
+}
+.search-results .search-result {
+    position: relative;
+    list-style: none;
+    margin: 10px;
+    background-color: #EFEFEF;
+    min-height: 100px;
+}
+.search-result-username,
+.search-result-title {
+    background-color: #111;
+    color: #FFF;
+    padding: 2px;
+}
+
+.search-result-play {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #f50;
+    right: 10px;
+}
+.search-result-play::after {
+    content: "▶";
+    color: #FFF;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+.sampler.right-panel {
+    z-index: 1;
+    background-color: white;
+}
+
+.samples.right-panel {
+    left: 0px;
+    background-color: red;
+    z-index: 0;
+}
+.sample {
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+    background-color: green;
+    padding: 20px;
+    margin: 5px;
+}
+
+.search-result {
+    border: 1px solid #AAA;
+    padding: 5px;
+}
+  </style>
 </head>
 <body>
   <div id="app"></div>
+
+    <header>
+        <h1>svmplr</h1>
+    </header>
+
+    <ul class="samples right-panel">
+        <li class="sample">
+        </li>
+        <li class="sample">
+        </li>
+    </ul>
+
+    <div class="search left-panel">
+        <input type="text" name="lname">
+        <ul class="search-results">
+        <li class="search-result">
+            <span class="search-result-username">username</span>
+            <br>
+            <span class="search-result-title">My track name</span>
+            <div class="search-result-play"></div>
+            <div class="search-result-sample"></div>
+        </li>
+        </ul>
+    </div>
+    <div class="sampler right-panel">
+    </div>
+
+   
 
   <script>
     // Set to 'true' to activate logged-in routes
@@ -12,5 +170,6 @@
   </script>
 
   <script src="/app.js"></script>
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
 </body>
 </html>
